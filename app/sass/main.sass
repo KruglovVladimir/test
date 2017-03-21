@@ -1,0 +1,360 @@
+@import "libs"
+@import "fonts"
+
+*::-webkit-input-placeholder
+	color: #898888
+	opacity: 1
+
+*:-moz-placeholder
+	color: #898888
+	opacity: 1
+
+*::-moz-placeholder
+	color: #898888
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #898888
+	opacity: 1
+
+body
+	min-width: 320px
+	line-height: 1.75
+.header
+  display: flex
+  justify-content: center
+  width: 100%
+  height: 100vh
+  font-size: 0
+  background-image: url(../img/headerBg.jpg)
+  background-position: center top
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-size: 100%
+ 
+
+.wrapper
+  display: flex
+  flex-flow: column
+  align-items: center
+  .navigations ul
+    display: flex
+    align-items: center
+    margin: 0 0 140px 0
+    font-family: "RobotoRegular"
+    & li a
+      margin: .5rem
+      font-size: 13px
+      color: #000
+      text-decoration: none
+      
+  & .jumbotron
+    display: flex
+    flex-flow: column
+    justify-content: center
+    width: 400px
+    text-align: center
+    font-family: "MyriadProRegular"
+    & h1
+      text-transform: uppercase
+      font-size: 44px
+      line-height: 50px
+      & span
+        font-size: 28px
+        position: relative
+        top: -30px
+        
+    & p
+      color: #979696
+      font-size: 15px
+    & button
+        margin: 10px auto
+        font-size: 13px
+        text-transform: uppercase
+        background: 0
+        border: 1px solid #000
+        width: 186px
+        height: 56px
+        cursor: pointer
+        outline: none
+        &:hover
+          background: #D8EC54
+          border: 0
+        
+@keyframes next
+    from
+      transform: translateY(0px)
+       background: #fff
+    20%
+      transform: translateY(5px)
+    50%
+      transform: translateY(10px)
+      background: #E0E0E0
+    70%
+      transform: translateY(15px)
+    to
+      transform: translateY(20px)
+     
+      bacground: #000
+.next
+  position: absolute
+  bottom: 10% 
+  left: 50%
+.circle
+    width: 10px  
+    height: 10px
+    border-radius: 50%
+    position: relative
+    animation: next  1.5s infinite ease
+    &:after
+      position: absolute
+      top: 5px
+      content: ''
+      width: 10px    
+      height: 10px  
+      border-radius: 50%
+      animation: next  1s infinite ease
+      
+    &:before
+      position: absolute
+      top: 20px
+      content: ''
+      width: 10px    
+      height: 10px
+      border-radius: 50%
+      animation: next  1s infinite ease
+
+section.aboutUs
+  background: url(../img/img.png)  no-repeat #1D1D1D
+  background-position: center 101% 
+  background-repeat: no-repeat
+  background-size: 100%
+  color: #fff
+  display: flex
+  font-family: "MyriadProRegular"
+  & .wrapper.left
+    width: 50%
+    position: relative
+    &::after
+      content: " "
+      position: absolute
+      width: 100%
+      height: 100%
+      background: url(../img/line.png) center top  no-repeat 
+      left: 50%
+  & .wrapper.right
+    width: 50%
+  & article.right
+    align-items: flex-start
+    margin-top: 250px
+    margin-bottom: 85px
+    margin-right: 150px
+    & p
+      text-align: left
+  & article.right:last-of-type 
+    margin-bottom: 300px
+  & article.left
+    align-items: flex-end
+    margin-top: 130px
+    margin-bottom: 50px
+    margin-left: 150px
+  & article
+    width: 375px
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+   
+    & h3
+      font-size: 48px
+      color: #fefefe
+      & span 
+        font-size: 30px
+        color: #d8ec54
+    & p
+      text-align: right
+      font-size: 15px
+      color: #b7b7b7
+      
+    
+.ourTeam
+  display: flex
+  flex-direction: column
+  align-items: center
+  font-family: "MyriadProRegular"
+  margin: 100px 0 300px 0
+  & h2
+    font-size: 34px
+    line-height: 35px
+    color: #1d1e1f
+  & span
+    margin-bottom: 100px
+    font-size: 16px
+    color: #898888
+  & .wrapper
+    width: 80%
+    flex-flow: row wrap
+    justify-content: space-around
+    & article
+      text-align: center
+      &:nth-of-type(2n)
+        margin-bottom: 200px
+      & h4
+        margin-top: 10px 
+        font-size: 24px
+        color: #464646
+        line-height: 30px
+      & p
+        font-size: 13px
+        color: #b3b3b3
+      & a
+        font-size: 25px
+        margin: 4px
+        color: #E4E4E4
+        &:hover
+          color: #D8EC54
+        
+.Work
+  display: flex
+  flex-direction: column
+  align-items: center
+  font-family: "MyriadProRegular"
+  position: relative
+  background:  url(../img/blog.png) no-repeat center/cover #181818
+  background-position: 0 -100%
+  margin-bottom: 200px
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 350px
+    top: -100px
+    left: 0
+    transform: skewY(-5deg)
+    z-index: -1
+    background: #181818
+    z-index: -999
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 250px
+    bottom: -100px
+    left: 0
+    z-index: -1
+    transform: skewY(-5deg)
+    background:  #181818
+  & .wrapper
+    width: 80%
+    flex-flow: row wrap
+    justify-content: space-around
+    align-items: baseline
+  & h2
+    font-size: 34px
+    line-height: 35px
+    color: #fff
+  & span
+    margin-bottom: 150px
+    font-size: 19px
+    color: #898888
+  & article
+    width: 310px
+    text-align: center
+    margin-bottom: 300px
+    & i
+      font-size: 60px
+      border: 3px solid #fff
+      color: #d8ec54
+      border-radius: 50%
+      padding: 40px
+    & h4
+      margin-top: 50px
+      font-size: 26px
+      color: #fff
+      margin-bottom: 20px
+    & p
+      font-size: 18px
+      color: #929292
+  & button
+    background: #fff
+    color: #000
+    width: 200px
+    height: 50px
+    border: 0
+    font-size: 16px
+    cursor: pointer
+    font-family: "MyriadProRegular"
+    &:hover
+      background: #D8EC54
+    
+    
+.contact
+  display: flex
+  flex-direction: column
+  align-items: center
+  & .wrapper
+    width: 50%
+    flex-flow: row wrap
+    justify-content: space-around
+    align-items: baseline
+  & h2
+    font-size: 34px
+    line-height: 35px
+    color: #1d1e1f
+  & span
+    margin-bottom: 50px
+    font-size: 16px
+    color: #898888
+  & article
+    width: 190px
+    text-align: center
+    & i
+      font-size: 25px
+    & p
+      font-size: 12px
+      color: #898888
+      margin: 0 0 130px 0
+  form
+    display: flex
+    flex-direction: column
+    width: 60%
+    justify-content: center
+    & input
+      text-align: center
+      height: 50px
+      margin: 0 0 20px
+      font-size: 15px
+      outline: none
+      font-family: "MyriadProRegular"
+      &:focus
+        border: 1px solid #DAED5E 
+    & textarea
+      resize: none
+      height: 180px
+      margin: 0 0 20px
+      text-align: center
+      padding: 15px 0 0 0
+      font-size: 15px
+      outline: none
+      font-family: "MyriadProRegular"
+      &:focus
+        border: 1px solid #DAED5E 
+    & input[type=submit]
+      background: #000
+      color: #fefefe
+      font-size: 17px
+      border: 0
+      cursor: pointer
+      margin-bottom: 130px
+    
+.footer  
+  text-align: center
+  color: #3b3b3b
+  font-size: 14px
+  font-family: "MyriadProRegular"
+
+
+
+        
+        
+        
+@import "media" 
